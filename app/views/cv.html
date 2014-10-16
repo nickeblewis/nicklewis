@@ -1,0 +1,15 @@
+<div class="jumbotron">
+  <br>
+  <h1>Curriculum Vitae</h1>
+</div>
+
+<div class="row marketing">
+
+  <div ng-repeat="item in items | orderBy:'order'">
+    <h4><span class="glyphicon glyphicon-asterisk"></span> {{item.name}}</h4>
+    <h5>{{item.start}} to {{item.end}}</h5>
+    <h5>{{item.location}}</h5>
+    <p ng-bind-html="item.description"></p>
+  </div>
+
+</div>
