@@ -11,6 +11,23 @@
 
 /* TODO: Refactor at some point the repeated code below :-) */
 angular.module('nicklewisApp')
+  .factory('Data', ['$firebase', 'FIREBASE_URL',
+    function($firebase, FIREBASE_URL) {
+
+      var ref = new Firebase(FIREBASE_URL);
+
+      var items = $firebase(ref);
+
+      var Item = {
+        all: items,
+        find: function(itemId) {
+          return items.$child(itemId);
+        },
+      };
+
+      return Item;
+    }
+  ])
   .factory('Tech', ['$firebase', 'FIREBASE_URL',
     function($firebase, FIREBASE_URL) {
 
@@ -48,7 +65,7 @@ angular.module('nicklewisApp')
   .factory('Status', ['$firebase', 'FIREBASE_URL',
     function($firebase, FIREBASE_URL) {
 
-  var ref = new Firebase(FIREBASE_URL + 'status');
+      var ref = new Firebase(FIREBASE_URL + 'status');
 
       var items = $firebase(ref);
 

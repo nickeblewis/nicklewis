@@ -29,6 +29,26 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/blog', {
+        templateUrl: 'views/comingsoon.html',
+        controller: 'CvCtrl'
+      })
+      .when('/services', {
+        templateUrl: 'views/comingsoon.html',
+        controller: 'CvCtrl'
+      })
+      .when('/contact', {
+        templateUrl: 'views/comingsoon.html',
+        controller: 'CvCtrl'
+      })
+      .when('/about', {
+        templateUrl: 'views/comingsoon.html',
+        controller: 'CvCtrl'
+      })
+      .when('/photography', {
+        templateUrl: 'views/comingsoon.html',
+        controller: 'CvCtrl'
+      })
       .when('/cv', {
         templateUrl: 'views/cv.html',
         controller: 'CvCtrl'

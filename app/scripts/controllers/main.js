@@ -8,11 +8,12 @@
  * Controller of the nicklewisApp
  */
 angular.module('nicklewisApp')
-  .controller('MainCtrl', function($scope, Tech, Status) {
+  .controller('MainCtrl', function($scope, Tech, Status, Data) {
 
     // Get the list of technologies I support from the back-end
     $scope.items = Tech.all;
     $scope.statuses = Status.all;
+    $scope.model = Data.all;
 
     $scope.hn = {};
 
