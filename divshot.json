@@ -1,6 +1,6 @@
 {
-	"name": "nicklewis",
-	"root": "dist",
-	"clean_urls": true,
-	"error_page": "error.html"
+  "name": "nicklewis",
+  "root": "dist",
+  "clean_urls": true,
+  "error_page": "error.html"
 }

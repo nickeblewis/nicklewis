@@ -30,8 +30,8 @@ angular
         controller: 'AboutCtrl'
       })
       .when('/blog', {
-        templateUrl: 'views/comingsoon.html',
-        controller: 'CvCtrl'
+        templateUrl: 'views/blog.html',
+        controller: 'BlogCtrl'
       })
       .when('/services', {
         templateUrl: 'views/comingsoon.html',

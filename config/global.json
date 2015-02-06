@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "_default": {
+            "link": "nicklewis"
+        }, 
+        "nicklewis": {
+            "applicationId": "AuqBgaRlSLdJ4nEMe3cyXTwCML354QF1NdYdS31d", 
+            "masterKey": "Y82Gns06trgBfATOyx0RZjyrSU4ih2vhmmvxdtss"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.1"
+    }
+}

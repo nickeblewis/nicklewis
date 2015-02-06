@@ -62,20 +62,39 @@ angular.module('nicklewisApp')
       return Item;
     }
   ])
-  .factory('Status', ['$firebase', 'FIREBASE_URL',
-    function($firebase, FIREBASE_URL) {
 
-      var ref = new Firebase(FIREBASE_URL + 'status');
+.factory('Status', ['$firebase', 'FIREBASE_URL',
+  function($firebase, FIREBASE_URL) {
 
-      var items = $firebase(ref);
+    var ref = new Firebase(FIREBASE_URL + 'status');
 
-      var Item = {
-        all: items,
-        find: function(itemId) {
-          return items.$child(itemId);
-        },
-      };
+    var items = $firebase(ref);
 
-      return Item;
-    }
-  ]);
+    var Item = {
+      all: items,
+      find: function(itemId) {
+        return items.$child(itemId);
+      },
+    };
+
+    return Item;
+  }
+])
+
+.factory('Blog', ['$firebase', 'FIREBASE_URL',
+  function($firebase, FIREBASE_URL) {
+
+    var ref = new Firebase(FIREBASE_URL + 'blog');
+
+    var items = $firebase(ref);
+
+    var Item = {
+      all: items,
+      find: function(itemId) {
+        return items.$child(itemId);
+      },
+    };
+
+    return Item;
+  }
+]);

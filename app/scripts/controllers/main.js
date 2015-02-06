@@ -10,6 +10,21 @@
 angular.module('nicklewisApp')
   .controller('MainCtrl', function($scope, Tech, Status, Data) {
 
+    // Parse - client key for nicklewis app
+    Parse.initialize("AuqBgaRlSLdJ4nEMe3cyXTwCML354QF1NdYdS31d", "ZjqTTEshGlVYdg3LnEp7RqihtGtnGpQuSnIwNwgn");
+
+    var today = new Date();
+
+    // Every time this page is hit a record is written to Parse
+    var TestObject = Parse.Object.extend("Tracker");
+    var testObject = new TestObject();
+    testObject.save({
+      foo: "today",
+      testDate: today
+    }).then(function(object) {
+      console.log("It worked!!!!");
+    });
+
     // Get the list of technologies I support from the back-end
     $scope.items = Tech.all;
     $scope.statuses = Status.all;
