@@ -156,6 +156,23 @@
               <li><i class="icon-mobile contact"></i> +44 (07747) 79 24 40</li>
               <li><a href="mailto:nick@nicklewis.co.uk"><i class="icon-mail-1 contact"></i> nick@nicklewis.co.uk</a></li>
             </ul><!-- /.contacts -->
+            <!--
+    PeoplePerHour Profile Widget
+    The div#pph-hire me is the element
+    where the iframe will be inserted.
+    You may move this element wherever
+    you need to display the widget
+-->
+<div id="pph-hireme"></div>
+<script type="text/javascript">
+(function(d, s) {
+    var useSSL = 'https:' == document.location.protocol;
+    var js, where = d.getElementsByTagName(s)[0],
+    js = d.createElement(s);
+    js.src = (useSSL ? 'https:' : 'http:') +  '//www.peopleperhour.com/hire/1842247002/46216.js?width=300&height=135&orientation=vertical&theme=dark&rnd='+parseInt(Math.random()*10000, 10);
+    try { where.parentNode.insertBefore(js, where); } catch (e) { if (typeof console !== 'undefined' && console.log && e.stack) { console.log(e.stack); } }
+}(document, 'script'));
+</script>
           </div><!-- /.col -->
 
           <!-- TODO: I would very much like to have an email newsletter but need to put more thought into the mechanics behind it before I do -->
